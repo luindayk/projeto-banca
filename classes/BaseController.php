@@ -1,5 +1,5 @@
 <?php
-    class BaseController {
+    abstract class BaseController {
 
         private $_app; 
 
@@ -7,7 +7,12 @@
             return strtolower(str_replace('Controller', '', get_class($this)));
         }
         
-        public function render($view, $model) {
+        public function render($view, $model, $title = null) {
+            
+            // Renderiza o cabeçalho
+            require_once("views/_header.php");
+
+            // Renderiza o conteúdo
             $viewFilename = "views/{$this->getControllerName()}/$view.php";
             
             if(is_file($viewFilename)) {
@@ -16,8 +21,13 @@
             else {
                 throw new Exception("Arquivo de visualização '$viewFilename' não encontrado.");
             }
+            
+            // Renderiza o rodapé
+            require_once("views/_footer.php");
         }
         
+        abstract public function requireLogin($action);
+
         private $_messages = []; 
 
         protected function hasMessages() {

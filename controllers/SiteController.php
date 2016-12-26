@@ -3,6 +3,10 @@
     require_once('classes/BaseModel.php');
 
     class SiteController extends BaseController {
+        public function requireLogin($action) {
+            return false;
+        }
+
         // Action padrão do controller
         public function actionIndex() {
             //$news = new News($this); // cria um novo objeto do modelo

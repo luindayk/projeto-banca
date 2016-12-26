@@ -4,6 +4,7 @@ class DataType /* extends SplEnum */ {
     const INTEGER = 0;
     const STRING = 1;
     const DATE_TIME = 2;
+    const DOUBLE = 3;
 }
 
 class Attribute {
@@ -42,6 +43,10 @@ class Attribute {
     
     public function getName() {
         return $this->_name;
+    }
+
+    public function getLabel() {
+        return $this->_label;
     }
 
 }

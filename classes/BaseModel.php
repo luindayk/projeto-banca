@@ -21,6 +21,7 @@ abstract class BaseModel {
     abstract protected function initAttributes(); // Inicialização dos atributos da tabela do BD
     abstract protected function getTableName(); // Nome da tabela
     abstract protected function getPkName();    // Nome do campo chave primária
+    abstract protected function validateData(); // Validação de dados do formulário
     
     public function __construct($controller) {
         $this->initAttributes();

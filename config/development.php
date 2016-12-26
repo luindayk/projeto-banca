@@ -13,7 +13,7 @@
         'db_password' => '123456',            
         
         // Nome do banco de dados
-        'db_schema' => 'news_portal',   
+        'db_schema' => 'banca',   
         
         // Nome do banco de dados
         'default_controller' => 'site', 
@@ -22,7 +22,7 @@
         'default_action' => 'index',     
         
         // URL base da aplicação
-        'base_url' => '/portal-noticias/',
+        'base_url' => '/projeto-banca/',
         
         // Sal para encriptação de senhas
         'password_salt' => 'Batat1nhaQuandoNasceSeE$parramaPeloCha1'
